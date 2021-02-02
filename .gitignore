@@ -17,3 +17,4 @@ src/Dockerfile-jupyter.dev
 # archives
 WORKING
 
+.DS_Store

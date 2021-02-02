@@ -1,2 +1,11 @@
 2to3
 #configure your required package here
+Django
+opencv-python
+pandas
+scipy
+plotly
+pycoingecko
+pyupbit
+tqdm
+websockets
