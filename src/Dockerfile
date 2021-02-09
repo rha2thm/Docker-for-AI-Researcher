@@ -20,9 +20,10 @@ RUN apt-get update && apt-get install -y \
 	zsh \
 	dumb-init \
 	openssh-server \
-	cron
+	cron \
+    tree
 	
-COPY src/requirements.txt /tmp
+COPY requirements.txt /tmp
 RUN pip install --upgrade pip
 RUN pip install -r /tmp/requirements.txt
 
@@ -42,16 +43,16 @@ RUN ldconfig && \
 # WORKDIR /
 RUN curl -fsSL https://code-server.dev/install.sh | sh
 RUN mkdir -p /root/.config/code-server
-RUN echo """bind-addr: 0.0.0.0:8080
-auth: password
-password: root
-cert: false""" >> /root/.config/code-server/config.yaml
+RUN echo """bind-addr: 0.0.0.0:8080 \
+    auth: password \
+    password: root \
+    cert: false""" >> /root/.config/code-server/config.yaml
 
 ########################################################
 # Thanks to https://github.com/touchifyapp/docker-ssh
 # # Replace ssh_config
-COPY src/sshd/* /usr/local/etc/sshd/
-COPY src/sshd/sshd_config /etc/ssh/sshd_config
+COPY sshd/* /usr/local/etc/sshd/
+COPY sshd/sshd_config /etc/ssh/sshd_config
 
 # set password
 RUN echo 'root:root' |chpasswd

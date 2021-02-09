@@ -9,3 +9,5 @@ pycoingecko
 pyupbit
 tqdm
 websockets
+pyarrow
+fastparquet
