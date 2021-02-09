@@ -15,6 +15,7 @@ RUN echo "$TINI_SHA512SUM  /usr/local/bin/tini" | sha512sum -c \
 ## install VSCODE dependancies
 RUN apt-get update && apt-get install -y \
 	sudo \
+    nano \
 	git \
 	git-lfs \
 	zsh \
