@@ -45,9 +45,9 @@ RUN ldconfig && \
 RUN curl -fsSL https://code-server.dev/install.sh | sh
 RUN mkdir -p /root/.config/code-server
 RUN echo """bind-addr: 0.0.0.0:8080 \
-    auth: password \
-    password: root \
-    cert: false""" >> /root/.config/code-server/config.yaml
+auth: password \
+password: root \
+cert: false""" >> /root/.config/code-server/config.yaml
 
 ########################################################
 # Thanks to https://github.com/touchifyapp/docker-ssh

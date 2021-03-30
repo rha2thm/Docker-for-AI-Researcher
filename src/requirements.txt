@@ -7,7 +7,17 @@ scipy
 plotly
 pycoingecko
 pyupbit
+python-binance
 tqdm
 websockets
 pyarrow
 fastparquet
+dataclasses
+graphviz
+matplotlib
+numpy
+numba
+pybullet>=1.7.5
+pyquaternion
+scikit-learn
+scipy

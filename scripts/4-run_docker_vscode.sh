@@ -19,3 +19,6 @@ sudo docker run -P -dit --ipc=host \
 	--name ${VS_CONTAINER_NAME} \
 	${VS_IMAGE_NAME}
 # """
+
+
+# docker run -P -dit --ipc host  -p 18080:8080 -p 16006:6006 -v /home/eunchong:/root/eunchong --name alln_ec alln:210330
