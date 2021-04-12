@@ -46,7 +46,7 @@ RUN curl -fsSL https://code-server.dev/install.sh | sh
 RUN mkdir -p /root/.config/code-server
 RUN echo """bind-addr: 0.0.0.0:8080 \
 \nauth: password \
-\npassword: root \
+\npassword: goalln \
 \ncert: false""" >> /root/.config/code-server/config.yaml
 
 ########################################################
@@ -63,7 +63,7 @@ EXPOSE 22
 EXPOSE 8080
 EXPOSE 6006
 EXPOSE 8000
-WORKDIR /root
+WORKDIR /home
 # RUN systemctl enable code-server
 # RUN nohup bash -c "code-server --bind-addr 0.0.0.0:8080 &"
 
