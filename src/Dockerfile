@@ -46,7 +46,7 @@ RUN curl -fsSL https://code-server.dev/install.sh | sh
 RUN mkdir -p /root/.config/code-server
 RUN echo """bind-addr: 0.0.0.0:8080 \
 \nauth: password \
-\npassword: goalln \
+\nhashed-password: d74d079785cba710143d20ae4f015359557055f8e7d1bea325d4d323c7de570d \
 \ncert: false""" >> /root/.config/code-server/config.yaml
 
 ########################################################

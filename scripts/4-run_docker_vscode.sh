@@ -21,4 +21,4 @@ sudo docker run -P -dit --ipc=host \
 # """
 
 
-# docker run -P -dit --ipc host  -p 18080:8080 -p 16006:6006 -v /home/eunchong:/root/eunchong --name alln_ec alln:210330
+# docker run -dit --runtime=nvidia -e NVIDIA_VISIBLE_DEVICES=2,3 --ipc host -p 1235:8080 -v /home:/home --name alln_ec alln:210412
